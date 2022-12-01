@@ -10,3 +10,5 @@ https://docs.digitalocean.com/products/databases/postgresql/how-to/manage-connec
 
 https://www.enterprisedb.com/postgres-tutorials/why-you-should-use-connection-pooling-when-setting-maxconnections-postgres
 
+https://www.digitalocean.com/community/tutorials/how-to-install-and-configure-elasticsearch-on-ubuntu-22-04
+
