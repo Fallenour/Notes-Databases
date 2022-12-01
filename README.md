@@ -105,21 +105,21 @@ https://mariadb.com/kb/en/server-system-variables/#userstat
 - https://www.digitalocean.com/community/tutorials/how-to-install-and-configure-elasticsearch-on-ubuntu-22-04
 
 ## Get Elasticsearch GPG Key
-curl -fsSL https://artifacts.elastic.co/GPG-KEY-elasticsearch | sudo gpg --dearmor -o /usr/share/keyrings/elastic.gpg
+- curl -fsSL https://artifacts.elastic.co/GPG-KEY-elasticsearch | sudo gpg --dearmor -o /usr/share/keyrings/elastic.gpg
 
 ## Configre Debian Package Repo for Elasticsearch Repository
 
-echo "deb [signed-by=/usr/share/keyrings/elastic.gpg] https://artifacts.elastic.co/packages/7.x/apt stable main" | sudo tee -a /etc/apt/sources.list.d/elastic-7.x.list
+- echo "deb [signed-by=/usr/share/keyrings/elastic.gpg] https://artifacts.elastic.co/packages/7.x/apt stable main" | sudo tee -a /etc/apt/sources.list.d/elastic-7.x.list
 
 ## Update Package Repo and install Elasticsearch from Repo
-sudo apt update
-sudo apt install elasticsearch
+- sudo apt update
+- sudo apt install elasticsearch
 
 ## Configure basic networking function for Elasticsearch
 
-sudo nano /etc/elasticsearch/elasticsearch.yml
+- sudo nano /etc/elasticsearch/elasticsearch.yml
 -- Change network.host setting from IP address to localhost
 
 ## Start the Elasticsearch Application, and set it to autorun on startup
-sudo systemctl start elasticsearch
-sudo systemctl enable elasticsearch
+- sudo systemctl start elasticsearch
+- sudo systemctl enable elasticsearch
