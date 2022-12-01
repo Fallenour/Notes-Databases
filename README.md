@@ -97,3 +97,19 @@ https://mariadb.com/kb/en/show-engines/
 
 
 https://mariadb.com/kb/en/server-system-variables/#userstat
+
+
+# Elasticsearch
+
+# Installing Elasticsearch
+- https://www.digitalocean.com/community/tutorials/how-to-install-and-configure-elasticsearch-on-ubuntu-22-04
+
+
+curl -fsSL https://artifacts.elastic.co/GPG-KEY-elasticsearch | sudo gpg --dearmor -o /usr/share/keyrings/elastic.gpg
+echo "deb [signed-by=/usr/share/keyrings/elastic.gpg] https://artifacts.elastic.co/packages/7.x/apt stable main" | sudo tee -a /etc/apt/sources.list.d/elastic-7.x.list
+sudo apt update
+sudo apt install elasticsearch
+sudo nano /etc/elasticsearch/elasticsearch.yml
+-- Change network.host setting from IP address to localhost
+sudo systemctl start elasticsearch
+sudo systemctl enable elasticsearch
